@@ -1,16 +1,19 @@
 name: first
 
-on: push
+on: [push]
 
 jobs: 
     job1:
+    
     	name: First job
 	runs on: ubuntu-latest
+	
 	steps: 
-	- name: Step one
-	  uses: actions/checkout@v2
-	  run: env | sort
+	- uses: actions/checkout@v1
+	run: env | sort 
+    
     job2:
+    
 	name: Secondjob
 	runs on: windows-latest
 	steps:
